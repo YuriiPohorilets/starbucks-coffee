@@ -1,0 +1,96 @@
+.menu {
+  position: relative;
+
+  width: 43px;
+  height: 24px;
+
+  background-color: transparent;
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background-color: getColor(accent);
+    background: getColor(gr-accent);
+
+    transition: all 300ms ease-out;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background-color: getColor(accent);
+    background: getColor(gr-accent);
+
+    transition: all 300ms ease-out;
+  }
+
+  &.is-open > .menu__btn {
+    transform: translateX(200%);
+    opacity: 0;
+  }
+
+  &.is-open::before {
+    transform: translateY(11px) rotate(-45deg) scale(0.7, 1);
+    transform-origin: center;
+  }
+
+  &.is-open::after {
+    transform: translateY(-11px) rotate(45deg) scale(0.7, 1);
+    transform-origin: center;
+  }
+
+  &[aria-expanded='false']:hover::before {
+    transform: rotate(-3deg);
+    transform-origin: right;
+  }
+
+  &[aria-expanded='false']:hover::after {
+    transform: rotate(3deg);
+    transform-origin: right;
+  }
+
+  &[aria-expanded='false']:hover .menu__btn {
+    transform: translate(-45%, -50%);
+  }
+
+  &[aria-expanded='true']:hover::before {
+    transform: translateY(11px) rotate(-45deg) scale(0.8, 1);
+    transform-origin: center;
+  }
+
+  &[aria-expanded='true']:hover::after {
+    transform: translateY(-11px) rotate(45deg) scale(0.8, 1);
+    transform-origin: center;
+  }
+}
+
+.menu__btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  width: 100%;
+  height: 2px;
+  background-color: getColor(accent);
+  background: getColor(gr-accent);
+
+  transition: all 300ms ease-out;
+}

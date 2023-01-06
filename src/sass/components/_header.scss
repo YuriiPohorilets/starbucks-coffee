@@ -1,0 +1,21 @@
+.header {
+  padding: 36px 0;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav {
+  display: none;
+}
+
+.nav__list {
+  @extend %list;
+}
+
+.nav__link {
+  @extend %link;
+}
