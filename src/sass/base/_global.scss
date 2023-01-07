@@ -6,9 +6,9 @@ body {
 
   background-color: getColor(bg);
 
-  // &.menu-is-open {
-  //   overflow: hidden;
-  // }
+  &.menu-is-open {
+    overflow: hidden;
+  }
 }
 
 h1,
@@ -55,7 +55,8 @@ img {
   overflow: hidden;
 }
 
-.title {
+.title,
+.subtitle {
   font-weight: 800;
   font-size: 48px;
   line-height: 109.47%;
@@ -73,20 +74,36 @@ img {
   }
 }
 
-.subtitle {
-  font-weight: 800;
-  font-size: 48px;
-  line-height: 109.47%;
+.description {
+  font-size: 12px;
+  line-height: 163.47%;
+  color: getColor(primary);
+}
+
+.btn {
+  padding: 13px 36px;
+
+  font-size: 16px;
+  line-height: 146.47%;
   letter-spacing: -0.03em;
-  color: getColor(active-white);
+  color: getColor(primary);
 
-  &__active {
-    color: getColor(accent);
+  background-color: transparent;
+  border-radius: 55px;
+  border: 1px solid getColor(primary);
 
+  cursor: pointer;
+
+  &--active {
+    padding: 13px 53px;
+
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: getColor(active-white);
+
+    background-color: getColor(accent);
     background: getColor(gr-accent);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    border: 1px solid transparent;
   }
 }
 

@@ -1,0 +1,64 @@
+.benefits__list {
+  @extend %list;
+
+  margin: 0 auto;
+  padding: 20px 43px;
+  max-width: 219px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+
+  background-color: getColor(card);
+  background: getColor(gr-card);
+
+  border-radius: 25px;
+}
+
+.benefits__item {
+  text-align: center;
+}
+
+.benefits__wrapper {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 0;
+
+    transform: translate(-50%, -50%);
+
+    width: 87px;
+    height: 87px;
+
+    background-color: getColor(accent);
+    background: getColor(gr-accent);
+    border-radius: 50%;
+  }
+}
+
+.benefits__img {
+  z-index: 1;
+}
+
+.benefits__title {
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 163.47%;
+  color: getColor(bg);
+}
+
+.benefits__description {
+  font-size: 12px;
+  line-height: 163.47%;
+  color: getColor(bg);
+}

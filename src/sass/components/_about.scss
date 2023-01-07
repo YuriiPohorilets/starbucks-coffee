@@ -1,0 +1,56 @@
+.about__img {
+  margin-left: 16px;
+  margin-bottom: 60px;
+  box-shadow: -16px 13px 0 getColor(accent);
+}
+
+.about__thumb {
+  position: relative;
+}
+
+.about__label {
+  top: 50%;
+  right: 5%;
+
+  transform: translate(-50%, -50%);
+
+  &::before {
+    content: 'we have';
+
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 86.47%;
+    letter-spacing: -0.02em;
+    text-align: center;
+    text-transform: uppercase;
+    color: getColor(active-white);
+
+    transform: translate(-50%, -50%) rotate(0);
+  }
+}
+
+.about__subtitle {
+  margin-bottom: 36px;
+}
+
+.about__description {
+  margin-bottom: 38px;
+}
+
+.about__wrapper {
+  position: relative;
+}
+
+.about__video {
+  position: relative;
+
+  filter: blur(0.8px);
+}
+
+.about__btn {
+  position: absolute;
+  top: 60px;
+  left: 30px;
+
+  padding: 12px 25px;
+}
