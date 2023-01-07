@@ -7,4 +7,8 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+
+  &:hover {
+    animation: gradient 2.5s ease-in-out infinite both;
+  }
 }

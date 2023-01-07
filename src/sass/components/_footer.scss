@@ -1,0 +1,19 @@
+.footer {
+  padding: 21px 0;
+
+  background-color: getColor(bg-footer);
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer__logo {
+  margin-bottom: 48px;
+}
+
+.footer__copy {
+  text-align: center;
+}
