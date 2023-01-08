@@ -8,6 +8,11 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
 
+  @include bpoint(desktop) {
+    font-size: 38px;
+    line-height: 109.47%;
+  }
+
   &:hover {
     animation: gradient 2.5s ease-in-out infinite both;
   }

@@ -11,6 +11,10 @@
 
   cursor: pointer;
 
+  @include bpoint(desktop) {
+    display: none;
+  }
+
   &::before {
     content: '';
     position: absolute;

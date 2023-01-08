@@ -1,11 +1,20 @@
 .header {
   padding: 36px 0;
+
+  @include bpoint(desktop) {
+    margin-bottom: 80px;
+  }
 }
 
 .header__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @include bpoint(desktop) {
+    justify-content: flex-start;
+    gap: 94px;
+  }
 }
 
 .menu.is-open + .nav {
@@ -24,6 +33,14 @@
   transform: translateX(-100%);
 
   transition: transform 300ms ease-in-out;
+
+  @include bpoint(desktop) {
+    transform: translateX(0);
+
+    position: static;
+    width: auto;
+    height: auto;
+  }
 }
 
 .nav__list {
@@ -39,6 +56,12 @@
   height: 100%;
 
   background-color: getColor(bg);
+
+  @include bpoint(desktop) {
+    padding: 0;
+
+    flex-direction: row;
+  }
 }
 
 .nav__item {
@@ -59,4 +82,17 @@
 
 .nav__link {
   @extend %link;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav__icon {
+  margin-right: 10px;
+
+  width: 30px;
+  height: 30px;
+
+  fill: currentColor;
 }

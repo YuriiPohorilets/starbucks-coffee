@@ -70,8 +70,20 @@
   }
 }
 
+.contacts__box {
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: getColor(gr-accent);
+  border-radius: 15px;
+}
+
 .contacts__icon {
   width: 30px;
   height: 30px;
-  fill: currentColor;
+  fill: getColor(active-white);
 }
