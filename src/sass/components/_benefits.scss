@@ -15,6 +15,15 @@
   background: getColor(gr-card);
 
   border-radius: 25px;
+
+  @include bpoint(desktop) {
+    padding: 40px 78px;
+    max-width: 1029px;
+
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 128px;
+  }
 }
 
 .benefits__item {
@@ -43,6 +52,11 @@
     background-color: getColor(accent);
     background: getColor(gr-accent);
     border-radius: 50%;
+
+    @include bpoint(desktop) {
+      width: 148px;
+      height: 148px;
+    }
   }
 }
 
@@ -55,10 +69,18 @@
   font-size: 19px;
   line-height: 163.47%;
   color: getColor(bg);
+
+  @include bpoint(desktop) {
+    font-size: 32px;
+  }
 }
 
 .benefits__description {
   font-size: 12px;
   line-height: 163.47%;
   color: getColor(bg);
+
+  @include bpoint(desktop) {
+    font-size: 20px;
+  }
 }

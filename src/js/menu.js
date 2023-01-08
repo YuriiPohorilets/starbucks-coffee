@@ -1,5 +1,5 @@
 (() => {
-  const menuBtnRef = document.querySelector('[js-menu-btn]');
+  const menuBtnRef = document.querySelector('[data-menu-btn]');
 
   const toggle = () => {
     const expanded = menuBtnRef.getAttribute('aria-expanded') === 'true' || false;

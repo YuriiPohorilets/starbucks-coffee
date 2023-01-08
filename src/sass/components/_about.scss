@@ -8,11 +8,24 @@
   position: relative;
 }
 
-.about__label {
-  top: 50%;
-  right: 5%;
+.about__img {
+  width: 183px;
+  height: 274px;
 
-  transform: translate(-50%, -50%);
+  @include bpoint(desktop) {
+    width: 465px;
+    height: 696px;
+  }
+}
+
+.about__label {
+  top: 35%;
+  right: 15%;
+
+  @include bpoint(desktop) {
+    top: 0;
+    left: 0;
+  }
 
   &::before {
     content: 'we have';

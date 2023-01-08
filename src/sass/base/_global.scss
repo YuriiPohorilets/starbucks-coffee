@@ -37,6 +37,10 @@ img {
 
 .section {
   padding: 60px 0;
+
+  @include bpoint(desktop) {
+    padding: 100px 0;
+  }
 }
 
 .hidden {
@@ -82,6 +86,10 @@ img {
   font-size: 12px;
   line-height: 163.47%;
   color: getColor(primary);
+
+  @include bpoint(desktop) {
+    font-size: 20px;
+  }
 }
 
 .btn {
@@ -108,6 +116,18 @@ img {
     background-color: getColor(accent);
     background: getColor(gr-accent);
     border: 1px solid transparent;
+
+    @include bpoint(desktop) {
+      padding: 20px 78px;
+
+      font-size: 24px;
+    }
+  }
+
+  @include bpoint(desktop) {
+    padding: 20px 53px;
+
+    font-size: 24px;
   }
 }
 
